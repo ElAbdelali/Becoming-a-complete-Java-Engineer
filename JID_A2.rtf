@@ -1,0 +1,46 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 HelveticaNeue-Bold;}
+{\colortbl;\red255\green255\blue255;\red21\green22\blue24;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c10980\c11373\c12157;\cssrgb\c100000\c100000\c100000;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 As in the previous assignment, I would suggest implement the solution in code, compile & run. You can then copy the code in the Submission area. Once submitted, you can click Next to view the Instructor Example, where the solution will be shown for you to cross-check.\'a0\cb1 \
+\pard\pardeftab720\sa192\partightenfactor0
+
+\f1\b\fs38\fsmilli19200 \cf2 \cb3 Questions for this assignment\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b0\fs32 \cf2 \cb3 In the previous assignment you created the following class ~ CurrencyConverter. There were two additional variables 'dollar' & 'Rupee', which were the last two variables. They are not needed anymore and hence removed from the below class.\cb1 \
+\cb3 For this assignment, you would modify the below class and replace all the variables with a single array. The variables have int data type. However, instead of creating an int[] array, let's make it a double[] as it makes more sense to represent currency via double rather than int. The array elements will be in the same order as the variables in the below class, i.e., 0th element will be 63.0, 1st will be 3.0, 2nd will be 3.0, etc. You can name the array as exchangeRates. printCurrencies should also be updated accordingly, i.e., first print statement would be as follows. Also, in the last print statement, which prints the value of the last element in the array, use 'length' field to print the value. Recall that exchangeRates.length would return the size of the array.\cb1 \
+\cb3 System.out.println("rupee: " + exchangeRates[0]);\cb1 \
+\
+\cb3 public class CurrencyConverter \{\cb1 \
+\cb3 int rupee = 63;\cb1 \
+\cb3 int dirham = 3; // UAE\cb1 \
+\cb3 int real = 3;\'a0 \'a0// brazilian\cb1 \
+\cb3 \'a0 \'a0\cb1 \
+\cb3 int chilean_peso = 595;\cb1 \
+\cb3 int mexican_peso = 18;\'a0 \'a0\cb1 \
+\cb3 \'a0 \'a0\cb1 \
+\cb3 int _yen = 107;\cb1 \
+\cb3 int $australian = 2;\'a0 \'a0\cb1 \
+\cb3 \'a0 \'a0\cb1 \
+\cb3 void printCurrencies() \{\cb1 \
+\cb3 System.out.println("rupee: " + rupee);\cb1 \
+\cb3 \'a0 \'a0 \'a0 \'a0 \'a0System.out.println("dirham: " + dirham);\cb1 \
+\cb3 \'a0 \'a0 \'a0 \'a0 \'a0System.out.println("real: " + real);\cb1 \
+\cb3 \'a0 \'a0 \'a0 \'a0 \'a0System.out.println("chilean_peso: " + chilean_peso);\cb1 \
+\cb3 \'a0 \'a0 \'a0 \'a0 \'a0System.out.println("mexican_peso: " + mexican_peso);\cb1 \
+\cb3 \'a0 \'a0 \'a0 \'a0 \'a0System.out.println("_yen: " + _yen);\cb1 \
+\cb3 \'a0 \'a0 \'a0 \'a0 \'a0System.out.println("$australian: " + $australian);\cb1 \
+\cb3 \}\cb1 \
+\cb3 \'a0 \'a0\cb1 \
+\cb3 public static void main(String[] args) \{\cb1 \
+\cb3 \'a0 \'a0 \'a0CurrencyConverter cc = new CurrencyConverter();\cb1 \
+\cb3 \'a0 \'a0 \'a0cc.printCurrencies();\cb1 \
+\cb3 \}\cb1 \
+\cb3 \}\cb1 \
+}

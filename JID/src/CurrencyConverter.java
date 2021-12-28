@@ -1,4 +1,3 @@
-
 public class CurrencyConverter {
 	int rupee = 63;
 	int dirham = 3;
@@ -6,7 +5,7 @@ public class CurrencyConverter {
 	int chilean_peso = 595;
 	int mexican_peso = 18;
 	int _yen = 107;
-	// for the sake of showing differebt ways one can write a variable
+	// for the sake of showing different ways one can write a variable
 	int $australian = 2;
 	int dollar;
 	int Rupee = 63;
