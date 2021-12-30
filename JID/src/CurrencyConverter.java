@@ -27,6 +27,5 @@ public class CurrencyConverter {
 		printValues.printCurrencies();
 
 	}
-	
 
 }
