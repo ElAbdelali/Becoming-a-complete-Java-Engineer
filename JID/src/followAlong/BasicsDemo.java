@@ -346,15 +346,16 @@ class BasicsDemo {
 		return approved;
 	}
   
-	
+
     static void switchExample() {
 	    System.out.println("\nInside switchExample ...");
 	    
+	    final byte month2 = 2;
 	    byte month = 3;
 	    switch (month) {
 		    case 1: System.out.println("January");
 	                break;
-		    case 2: System.out.println("February");
+		    case month2: System.out.println("February");
 	                break;
 	        case 3: System.out.println("March");
 	                break;
@@ -518,6 +519,136 @@ class BasicsDemo {
 		//Math math = new Math();
 	}
 	
+	public BasicsDemo(){
+		System.out.println("Inside no-arg constructor");
+	}
+	public BasicsDemo(int id){
+		System.out.println("Inside constructor with a parameter ...");
+	}
+	{
+		System.out.println("Inside instance initializer ..."); // instance initializer will appear in specified constructor
+	}
+	private static void boxedPrimitives() {
+		Integer boxedInt = Integer.valueOf(8); // creating a integer instance, valueOf is a static factory method 
+		Boolean boxedBoolean = Boolean.valueOf(true); // creating a boolean box primitive
+		Character boxedCharacter = Character.valueOf('c'); // creating a character box primitive
+		Double boxedDouble = Double.valueOf(25.5); // creating a Double box primitive
+		Integer boxedInt1 = Integer.valueOf("8"); // except Character class, the rest have the overloaded method
+		//Integer invalid = Integer.valueOf("eight"); // needs to be an int (toString is used behind the scenes)
+		
+		//Integer boxedInt2 = new Integer(8); // this is a deprecated class and we should utilize only valueOf as it is more efficient
+		
+		
+		// how to unwrap boxed primitive: typeValue
+		int primitiveInt = boxedInt.intValue();
+		Boolean primitiveBoxed = boxedBoolean.booleanValue();
+		char primitivechar = boxedCharacter.charValue();
+		
+		// 1. parsing strings: parseType useful for reading files and remote servers
+		
+		String data = "4004	Effective Java Programming Language Guide	2007	T	4.9";
+		
+		String[] items = data.split("\t"); // splitting the above code into an array utilizing .split which passes a split 
+		// primitives below
+		long id = Long.parseLong(items[0]);
+		String title = items[1];
+		int pubYear = Integer.parseInt(items[2]);
+		char genre = items[3].charAt(0);
+		double rating = Double.parseDouble(items[4]);
+		
+//		System.out.println(id);
+//		System.out.println(title);
+//		System.out.println(pubYear);
+//		System.out.println(genre);
+//		System.out.println(rating);
+		
+		
+		// objects below
+		Integer boxedPubYear = Integer.valueOf(items[2]);
+		//System.out.println(boxedPubYear);
+		
+		// 2. MIN_VALUE and MAX_VALUE
+		
+		// 3. utility method
+		
+		boolean isLetter = Character.isLetter(genre);
+		boolean isDigit = Character.isDigit(genre);
+		boolean isLetterOrDigit = Character.isLetterOrDigit(genre);
+		boolean isUpperCase = Character.isUpperCase(genre);
+		boolean isNan = Double.isNaN(0.0/0.0);
+		
+		System.out.println(isLetter);
+		System.out.println(isDigit);
+		System.out.println(isLetterOrDigit);
+		System.out.println(isUpperCase);
+		System.out.println(isNan);
+		
+		String binary = Integer.toBinaryString(8);
+		System.out.println(binary);
+		String pubYearAsString = Integer.toString(pubYear);
+		System.out.println(pubYearAsString);
+		
+		// populate data structures, always need to store an object reference, not primitives
+		
+		ArrayList idList = new ArrayList();
+		idList.add(Long.valueOf(id));
+		idList.add(id); // java 5 onwards, autoboxing - reduces verbosity autoboxing does not work for arrays
+		
+		// Generics - paramaterized type 
+		ArrayList<Double> ratingList = new ArrayList<>();
+		ratingList.add(8.0);
+		
+		
+		//System.out.println(primitiveInt);
+		
+		
+		
+		//System.out.println(boxedInt);
+//		System.out.println(boxedBoolean);
+//		System.out.println(boxedCharacter);
+//		System.out.println(boxedDouble);
+//		System.out.println(boxedInt1);
+		//System.out.println(boxedInt2);
+		//System.out.println(invalid);
+
+		
+		//Integer invalid = Integer.valueOf("eight"); // number format exception appears
+		
+	}
+		
+	static void veryExpensive() {
+		System.out.println("\nInside veryExpensive....");
+		
+		long sum = 0L; // always use primitive vs wrapper class
+		for(long i = 0; i < Integer.MAX_VALUE; i++) {
+			sum = sum + i;
+		}
+	}
+	
+	static void compareBoxPrimitives() {
+		System.out.println("\nInside compareBoxPrimitives ...");
+		
+		Integer num1 = new Integer(0);
+		Integer num2 = new Integer(0);
+		System.out.println("(num1 == num2): " + (num1 == num2));
+		
+		// Solutions:
+		
+		System.out.println("(num1.intValue() == num2.intValue()): " + (num1.intValue() == num2.intValue()));
+		System.out.println("(num1.equals(num2)): " + (num1.equals(num2)));
+		
+		Integer num3 = new Integer(1);
+		System.out.println("(num1 < num3): " + (num1 < num3));
+	}
+	static Integer i;
+	static void unbelievable() {
+		System.out.println("\nInside unbelievable ...");
+		if(i == 0){
+			System.out.println("weird!");
+		}
+	}
+	
+	
 	public static void main(String[] args) {
 	  // Language Basics 1
 	  //print();				
@@ -549,9 +680,19 @@ class BasicsDemo {
       // package creation demo
       //stringExamples();
 	  //stringPool();	
-	  mathDemo();
+	  //mathDemo();
+	  //BasicsDemo bd = new BasicsDemo(1);
+	  //BasicsDemo bd2 = new BasicsDemo();
+	  //switchExample();
+	  //boxedPrimitives();
+	  //Integer[] items = new int[]{1, 2}; // compilation error, incompatible types: type mismatch: cannot convert from int[] to Integer[]
+		
+//		long start = System.nanoTime();
+//		veryExpensive();
+//		System.out.println("Elapsed Time: " + ((System.nanoTime() - start) / 1000000.0) + " mseconds");
+		//compareBoxPrimitives();
+		//unbelievable();
 	  	
     }
-		
-		
+	
 }	
