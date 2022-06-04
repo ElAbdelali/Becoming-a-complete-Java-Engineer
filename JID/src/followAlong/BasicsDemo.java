@@ -109,8 +109,8 @@ class BasicsDemo {
 		  System.out.println("# exams: " + scores.length);
 		  
 		  Student[] students = new Student[3];//{new Student(), new Student(), new Student()};
-		  students[0] = new Student();
-		  students[1] = new Student();
+		  //students[0] = new Student();
+		  //students[1] = new Student();
 		 // students[2] = new Student();
 		  /*students[0].name = "John";
 		  students[1].name = "Raj";
@@ -690,8 +690,8 @@ class BasicsDemo {
 //		long start = System.nanoTime();
 //		veryExpensive();
 //		System.out.println("Elapsed Time: " + ((System.nanoTime() - start) / 1000000.0) + " mseconds");
-		//compareBoxPrimitives();
-		//unbelievable();
+		// compareBoxPrimitives();
+		unbelievable();
 	  	
     }
 	
