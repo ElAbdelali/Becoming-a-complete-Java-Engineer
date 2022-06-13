@@ -4,6 +4,14 @@ public class Patient extends User{
 	
 	private long patientId;
 	private boolean insured;
+	private HealthInsurancePlan insurancePlan;
+	
+	public HealthInsurancePlan getInsurancePlan() {
+		return insurancePlan;
+	}
+	public void setInsurancePlan(HealthInsurancePlan insurancePlan) {
+		this.insurancePlan = insurancePlan;
+	}
 	public long getPatientId() {
 		return patientId;
 	}

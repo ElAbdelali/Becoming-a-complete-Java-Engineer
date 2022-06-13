@@ -1,11 +1,19 @@
 package followAlong;
 
 import java.util.ArrayList;
+import java.util.*;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-class BasicsDemo {
+/**
+ * 
+ * Demonstrates Java's basic language features
+ * @author abdelalieljaouhari
+ *
+ */
+
+public class BasicsDemo {
 		
 	// Adapted from http://www.ntu.edu.sg/home/ehchua/programming/java/J1a_Introduction.html
     static void print() {
@@ -59,8 +67,16 @@ class BasicsDemo {
 		  System.out.println(amountPaidByInsurance);
 		  System.out.println(amountPaidByPatient);
 	}
+	
+	/**
+	 * typeCasting 1
+	 * 
+	 */
+	/*
+	 * typeCasting 2 implementation
+	 */
 		
-    static void typeCasting() {
+    public static void typeCasting() {
       System.out.println("\nInside typeCasting ...");
       // Explicit casting
       long y = 42;
