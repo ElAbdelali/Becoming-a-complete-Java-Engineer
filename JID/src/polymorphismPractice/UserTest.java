@@ -29,18 +29,33 @@ public class UserTest {
 //        ut.printUserType(user);
 //        ut.printUserType(staff);
 //        ut.printUserType(editor);
-    	User staff = new Staff(); // compiler tries to find a compatible method/parameter
+    	//User staff = new Staff(); // compiler tries to find a compatible method/parameter
 //    	staff.staticMethod();
 //    	staff.postAReview("");
     	//staff.instanceMethod(10);
-    	staff.instanceMethod(new Staff());
-
+    	//staff.instanceMethod(new Staff());
+    	
+    	//User staff = new Staff();
+    	//staff.staticMethod(); // early binding, static method is not overridden, reference type is what matters (user type)
+    	//((Staff) staff).staticMethod(); // static method's can only be hidden, never overridden
+    	
+    	//staff.saveWebLink();
+    	
+    	//((Staff)staff).displayUserInfo();
+    	
+    	//System.out.println(staff.toString());//Always override toString method - Item 10
         
-
+    	//staff.displayUserInfo();
+    	
+    	//User staff2 = staff;
+    	//System.out.println(staff.hashCode());
+    	//System.out.println(staff2.hashCode());
 
         //editor.approveReview(); // compiler is looking at the reference time, which is of User, not the object type
         //editor.postAReview();
         //editor.saveWebLink();
+    	
+    	User staff = new Staff(3);
         
     }
 
