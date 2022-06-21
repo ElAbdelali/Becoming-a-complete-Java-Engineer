@@ -19,6 +19,16 @@ class StudentTest {
 		student1.setName("john");
 		System.out.println("Updated name of student1: " + student1.getName());
 		System.out.println("Number students created so far " + Student.getStudentCount());
+		String[] list = new String[4];
+		
+//		list[0] = student1;
+//		
+//		for(Student student : list) {
+//			String name = student.getName();
+//			String gender = student.getGender();
+//			printNameAndGender(name, gender);
+//		}
+		
 		
 //		Student student1 = new Student("Joan", "male", 18, 223_456_7890L, 3.8, 'B');
 //		 
@@ -40,6 +50,11 @@ class StudentTest {
 
 		
 
+	}
+	
+	private static void printNameAndGender(String name, String gender) {
+		System.out.println("Name: " + name);
+		System.out.println("Gender: " + gender);
 	}
 
 }

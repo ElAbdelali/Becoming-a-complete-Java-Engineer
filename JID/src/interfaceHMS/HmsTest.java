@@ -31,7 +31,7 @@ public class HmsTest {
 		
 		double platinumPremium = platinumPlan.computeMonthlyPremium(5000, 56, true);
 		double goldPremium = goldPlan.computeMonthlyPremium(5000, 56, true);
-		double silverPremium = silverPlan.computeMonthlyPremium(5000, 56, true);
+		double silverPremium = silverPlan.computeMonthlyPremium(8000, 53, true);
 		double bronzePremium = bronzePlan.computeMonthlyPremium(5000, 56, true);
 
 		System.out.printf("The platinumPremium is: %.2f", platinumPremium);
